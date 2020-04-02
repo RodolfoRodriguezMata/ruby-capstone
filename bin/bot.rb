@@ -1,25 +1,23 @@
-require 'telegram_bot'
+require 'telegram/bot'
 require_relative '../lib/cards_class.rb'
+require_relative '../lib/triple_draw.rb'
 token = '1139144961:AAEpTqlVbnKEp41ZO0d1U1asm6o26C04jt0'
-bot = TelegramBot.new(token: token)
 deck = Deck.new
 
-bot.get_updates(fail_silently: true) do |message|
-    puts "@#{message.from.username}: #{message.text}"
-    command = message.get_command_for(bot)
-  
-    message.reply do |reply|
-      case command
-      when /start/i
-        reply.text = "All I can do is say hello. Try the /greet command."
-      when /greet/i
-        reply.text = "Hello, #{message.from.first_name}. 🤖"
-      when /card/i
-        reply.text = "#{deck.single_spread}"
-      else
-        reply.text = "I have no idea what #{command.inspect} means."
-      end
-      puts "sending #{reply.text.inspect} to @#{message.from.username}"
-      reply.send_with(bot)
+Telegram::Bot::Client.run(token) do |bot|
+  bot.listen do |message|
+    case message.text
+    when '/start'
+      bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
+    when '/stop'
+      bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
+    when '/card'
+      bot.api.send_message(chat_id: message.chat.id, text: "#{deck.single_spread}")
+    when '/three'
+      bot.api.send_message(chat_id: message.chat.id, text: "#{deck.triple_spread}")
+    when '/photo'
+      bot.api.send_photo(chat_id: message.chat.id, photo: 'https://raw.githack.com/RodolfoRodriguezMata/ruby-capstone/development/images/0.jpg')
     end
+    
   end
+end

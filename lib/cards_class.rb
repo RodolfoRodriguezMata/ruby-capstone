@@ -1,25 +1,27 @@
 class Deck
+    attr_reader :chosen_card, :card_name, :card_description, :card_suite
+    
     def initialize
-        @card_list {
+        @card_list = [
             {
                 number: 0,
                 name: 'The Fool',
                 description: "In spiritual matters it represent ideas and thoughts, which endeavor to trascend earth. In material matters, reveals folly, eccentricity, even mania. It represents a sudden, unexpected impulse.",
-                image: '../Tarot/',
+                image: '../images/0.jpg',
                 suite: 'Trumps'
             },
             {
                 number: 1,
                 name: 'The Magus',
                 description: "Skill. Wisdom. Adroitness. Elasticity. Craft. Cunning. Deceit. Theft. Sometimes esoteric wisdom or power. Messages. Business transactions. Learning or intelligence interfering with the matter in hand.",
-                image: '../Tarot/',
+                image: '../images/1.jpg',
                 suite: 'Trumps'
             },
             {
                 number: 2,
                 name: 'The Priestess',
                 description: "Pure, exalted and gracious influence enters the matter, bringing change, alternation, increase and decrease, fluctuation. Exuberance should be tempered and careful balance mantained.",
-                image: '../Tarot/',
+                image: '../images/2.jpg',
                 suite: 'Trumps'
             },
             {
@@ -547,5 +549,14 @@ class Deck
                 image: '../Tarot/',
                 suite: 'Disks'
             },
-        }
+        ]
     end
+
+    def single_spread
+        @chosen_card = @card_list.sample
+        @card_name = @chosen_card[:name]
+        @card_description = @chosen_card[:description]
+        @card_suite = @chosen_card[:suite]
+        return "Your card is: #{card_name}.\n#{card_description}\nFrom the suite of: #{card_suite}"
+    end
+end

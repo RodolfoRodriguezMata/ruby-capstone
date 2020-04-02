@@ -1,5 +1,5 @@
 class Deck
-    attr_reader :card_list, :chosen_card, :first_card, :second_card, :third_card
+    attr_reader :deck, :card_list, :chosen_card, :first_card, :second_card, :third_card
     
     def initialize
         @card_list = [
@@ -551,6 +551,8 @@ class Deck
             },
         ]
     end
+
+    
 
     def single_spread
         @chosen_card = @card_list.sample

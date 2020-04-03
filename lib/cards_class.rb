@@ -1,5 +1,5 @@
 class Deck
-    attr_reader :deck, :card_list, :chosen_card, :first_card, :second_card, :third_card
+    attr_reader :deck, :card_list, :chosen_card, :spread, :first_card, :second_card, :third_card
     
     def initialize
         @card_list = [
@@ -556,14 +556,17 @@ class Deck
 
     def single_spread
         @chosen_card = @card_list.sample
-        return "Your card is: #{chosen_card[:name]}.\n#{chosen_card[:description]}\nFrom the suite of: #{chosen_card[:suite]}"
+        return @chosen_card
     end
 
     def triple_spread
+        @spread = []        
         @first_card = @card_list.sample
-        @second_card = @card_list.sample 
+        @second_card = @card_list.sample
         @third_card = @card_list.sample
 
-        return "Your cards are: #{first_card[:name]}, #{second_card[:name]} and #{third_card[:name]}"
+        @spread.push(@first_card, @second_card, @third_card)
+
+        return @spread
     end
 end

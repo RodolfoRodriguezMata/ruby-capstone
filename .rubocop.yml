@@ -4,20 +4,27 @@ AllCops:
     - "README.md"
     - "Guardfile"
     - "Rakefile"
+    - "./spec/spec_helper.rb"
 
   DisplayCopNames: true
 
-Layout/LineLength:
-  Max: 120
+Metrics/LineLength:
+  Max: 999
 Metrics/MethodLength:
-  Max: 20
+  Max: 999
 Metrics/AbcSize:
   Max: 50
 Metrics/ClassLength:
-  Max: 150
+  Max: 999
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
   Max: 30
+Metrics/CyclomaticComplexity:
+  Max: 15
+Metrics/PerceivedComplexity:
+  Max: 15
+Metrics/ModuleLength:
+  Max: 999
 
 
 Style/Documentation:

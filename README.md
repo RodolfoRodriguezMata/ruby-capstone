@@ -20,10 +20,10 @@ Project: Ruby capstone project
 <br />
 <p align="center">
   
-  <h3 align="center">Enumerables</h3>
+  <h3 align="center">Ruby Capstone - Telegram bot</h3>
 
   <p align="center">
-    Building the methods from the Enumerables module from Ruby
+     a Telegram bot that provides the user with a random card from the Thoth tarot deck, along with its interpretation, or a triple spread of random cards along with interpretations. <a href="https://en.wikipedia.org/wiki/Thoth_tarot_deck">Learn more >></a>
     <br />
     <a href="https://github.com/RodolfoRodriguezMata/ruby-capstone"><strong>Explore the docs »</strong></a>
     <br />

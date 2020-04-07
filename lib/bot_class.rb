@@ -15,6 +15,7 @@ class Tarotbot
   end
 
   def img_reply(bot, message, url, title)
+    puts url
     bot.api.send_photo(chat_id: message.chat.id, photo: url, caption: title)
   end
 

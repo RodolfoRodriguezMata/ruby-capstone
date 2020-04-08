@@ -84,8 +84,7 @@ https://www.notion.so/Build-your-own-bot-ebd0d7ac5da240e5987720bdc83f38fa
        -if bundler hasn't been installed run: gem install bundler
     4. Type "bundle install" (in case of not having telegram-bot-ruby and json_pure gem installed) 
     5. Type "bin/bot.rb/"
-    6. In telegram search bar type "ThothTarotBot"
-      <img src="images/readme-images/bot.png">
+    6. In telegram search bar type "ThothTarotBot" or if on web telegram, click <a href="http://t.me/ThothTarotBot">here</a>
     7. click "Start"
 
 ## Commands

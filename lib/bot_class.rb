@@ -36,9 +36,9 @@ class Tarotbot
       content = "Quick recap:\nThe 22 Major Arcana or 'Trumps' that depict the higher-influences.\nThe Minor Arcana, divided into 4 sets of 14 cards each:\n -Wands, connected with the primal element of fire, great energy.\n -Cups, connected with the primal element of water, love and emotions.\n -Swords, connected with the primal element of air, intellectual matters.\n -Disks, connected with the primal element of earth, material affairs.\n\nEach suite has 4 court cards:\n -Knights may mean the coming, or going of a matter, or arrival or departure, according to the direction in which they face.\n -Queens and princes most often indicate actual persons involved in the matter.\n -Princesses may show ideas, thoughts, or opinions related to the subject."
       text_reply(bot, message, content)
       card = @deck.single_spread
-      url = card["image"]
-      title = card["name"]
-      content = "#{card["description"]}\nFrom the suite of: #{card["suite"]}"
+      url = card['image']
+      title = card['name']
+      content = "#{card['description']}\nFrom the suite of: #{card['suite']}"
       img_reply(bot, message, url, title)
       text_reply(bot, message, content)
     when '/triple'
@@ -46,9 +46,9 @@ class Tarotbot
       text_reply(bot, message, content)
       spread = @deck.triple_spread
       spread.each do |x|
-        url = x["image"]
-        title = x["name"]
-        content = "#{x["description"]}\nFrom the suite of: #{x["suite"]}"
+        url = x['image']
+        title = x['name']
+        content = "#{x['description']}\nFrom the suite of: #{x['suite']}"
         img_reply(bot, message, url, title)
         text_reply(bot, message, content)
       end

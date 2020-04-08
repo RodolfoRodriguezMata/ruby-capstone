@@ -14,6 +14,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ice_nine (0.11.2)
     inflecto (0.0.2)
+    json_pure (2.3.0)
     multipart-post (2.1.1)
     telegram-bot-ruby (0.12.0)
       faraday
@@ -30,7 +31,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json_pure
   telegram-bot-ruby (~> 0.12.0)
 
 BUNDLED WITH
-   1.16.1
+   1.17.2

@@ -61,16 +61,31 @@ and following this specifications:
 https://www.notion.so/Build-your-own-bot-ebd0d7ac5da240e5987720bdc83f38fa
 
 ## Bot information
-- [x] This bot takes the Thoth Tarot and provides two types of readings: a single card, or three that provide slightly more context
+- [x] This bot takes the Thoth Tarot and provides two types of readings: a single card, or three that provide slightly more context.
+
+## Pre-requesites
+
+    -Git
+    -Ruby
+    -Bundler
+    -Telegram account, info <a href="https://web.telegram.org/#/login">here</a>
+
+    This app uses two gems to work:
+
+      -<a href="https://rubygems.org/gems/telegram-bot-ruby">telegram-bot-ruby</a> Ruby wrapper for Telegram's Bot API.
+
+      -<a href="https://rubygems.org/gems/json_pure">json_pure</a> This is a JSON implementation in pure Ruby.
 
 ## Getting Started
 
     1. Open Bash terminal
     2. Type "git clone https://github.com/RodolfoRodriguezMata/ruby-capstone.git"
     3. Type "cd ruby-capstone"
-    4. Type "bundle install" (in case of not having telegram-bot-ruby gem installed) 
+       -if bundler hasn't been installed run: gem install bundler
+    4. Type "bundle install" (in case of not having telegram-bot-ruby and json_pure gem installed) 
     5. Type "bin/bot.rb/"
     6. In telegram search bar type "ThothTarotBot"
+      <img src="images/readme-images/bot.png">
     7. click "Start"
 
 ## Commands

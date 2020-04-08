@@ -10,6 +10,8 @@ class Tarotbot
     end
   end
 
+  private
+
   def text_reply(bot, message, content)
     bot.api.send_message(chat_id: message.chat.id, text: content)
   end
@@ -31,6 +33,8 @@ class Tarotbot
       content = "The Thoth tarot is a series of seventy-eight pictorial images based on the teachings of the kabbalah, a meditative path to the higher planes of consciousness.\n\nIt consists of 22 Major Arcana or 'Trumps' that depict the higher-influences.\nThe Minor Arcana, divided into 4 sets of 14 cards each:\n -Wands, connected with the primal element of fire, great energy.\n -Cups, connected with the primal element of water, love and emotions.\n -Swords, connected with the primal element of air, intellectual matters.\n -Disks, connected with the primal element of earth, material affairs.\n\nEach suite has 4 court cards:\n -Knights may mean the coming, or going of a matter, or arrival or departure, according to the direction in which they face.\n -Queens and princes most often indicate actual persons involved in the matter.\n -Princesses may show ideas, thoughts, or opinions related to the subject."
       text_reply(bot, message, content)
     when '/single'
+      content = "Quick recap:\nThe 22 Major Arcana or 'Trumps' that depict the higher-influences.\nThe Minor Arcana, divided into 4 sets of 14 cards each:\n -Wands, connected with the primal element of fire, great energy.\n -Cups, connected with the primal element of water, love and emotions.\n -Swords, connected with the primal element of air, intellectual matters.\n -Disks, connected with the primal element of earth, material affairs.\n\nEach suite has 4 court cards:\n -Knights may mean the coming, or going of a matter, or arrival or departure, according to the direction in which they face.\n -Queens and princes most often indicate actual persons involved in the matter.\n -Princesses may show ideas, thoughts, or opinions related to the subject."
+      text_reply(bot, message, content)
       card = @deck.single_spread
       url = card["image"]
       title = card["name"]
@@ -38,6 +42,8 @@ class Tarotbot
       img_reply(bot, message, url, title)
       text_reply(bot, message, content)
     when '/triple'
+      content = "These cards are meant to be read from the center out:\n -The second card signifying the subject at hand.\n -The first and second card serve to provide balance:\n\n  Swords oppose disks.\n  Wands oppose cups.\n  Swords are friendly to cups and wands.\n  Wands complement swords and disks.\n\n -When the first and third card oppose each other, the second card is affected by neither."
+      text_reply(bot, message, content)
       spread = @deck.triple_spread
       spread.each do |x|
         url = x["image"]

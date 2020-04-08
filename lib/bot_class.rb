@@ -15,7 +15,6 @@ class Tarotbot
   end
 
   def img_reply(bot, message, url, title)
-    puts url
     bot.api.send_photo(chat_id: message.chat.id, photo: url, caption: title)
   end
 
@@ -33,17 +32,17 @@ class Tarotbot
       text_reply(bot, message, content)
     when '/single'
       card = @deck.single_spread
-      url = card[:image]
-      title = card[:name]
-      content = "#{card[:description]}\nFrom the suite of: #{card[:suite]}"
+      url = card["image"]
+      title = card["name"]
+      content = "#{card["description"]}\nFrom the suite of: #{card["suite"]}"
       img_reply(bot, message, url, title)
       text_reply(bot, message, content)
     when '/triple'
       spread = @deck.triple_spread
       spread.each do |x|
-        url = x[:image]
-        title = x[:name]
-        content = "#{x[:description]}\nFrom the suite of: #{x[:suite]}"
+        url = x["image"]
+        title = x["name"]
+        content = "#{x["description"]}\nFrom the suite of: #{x["suite"]}"
         img_reply(bot, message, url, title)
         text_reply(bot, message, content)
       end

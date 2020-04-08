@@ -9,14 +9,14 @@ class Deck
   end
 
   def single_spread
-    @chosen_card = @card_list.sample
+    @chosen_card = @card_list[Random.new.rand(77)]
   end
 
   def triple_spread
     @spread = []
-    @first_card = @card_list.sample
-    @second_card = @card_list.sample
-    @third_card = @card_list.sample
+    @first_card = @card_list[Random.new.rand(77)]
+    @second_card = @card_list[Random.new.rand(77)]
+    @third_card = @card_list[Random.new.rand(77)]
 
     @spread.push(@first_card, @second_card, @third_card)
 

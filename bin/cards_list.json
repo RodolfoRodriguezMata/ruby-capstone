@@ -225,15 +225,15 @@
   },
   {
     "number": 32,
-    "name": "Princess of Wands",
-    "description": "The earthy part of fire. An energetic young woman, individualistic, brilliant and daring, expressive in love or anger, enthusiastic. Superficial, theatrical, shallow, cruel, unreliable, faithless.",
+    "name": "Prince of Wands",
+    "description": "The airy part of fire. A young man, swift and strong, impulsive, violent, just, noble and generous with a sense of humor. Proud, intolerant, cruel, cowardly, and prejudiced.",
     "image": "https://raw.githack.com/RodolfoRodriguezMata/ruby-capstone/development/images/32.jpg",
     "suite": "Wands"
   },
   {
     "number": 33,
-    "name": "Prince of Wands",
-    "description": "The airy part of fire. A young man, swift and strong, impulsive, violent, just, noble and generous with a sense of humor. Proud, intolerant, cruel, cowardly, and prejudiced.",
+    "name": "Princess of Wands",
+    "description": "The earthy part of fire. An energetic young woman, individualistic, brilliant and daring, expressive in love or anger, enthusiastic. Superficial, theatrical, shallow, cruel, unreliable, faithless.",
     "image": "https://raw.githack.com/RodolfoRodriguezMata/ruby-capstone/development/images/33.jpg",
     "suite": "Wands"
   },
